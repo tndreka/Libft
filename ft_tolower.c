@@ -6,7 +6,7 @@
 /*   By: tndreka <tndreka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:36:21 by tndreka           #+#    #+#             */
-/*   Updated: 2024/03/14 15:09:45 by tndreka          ###   ########.fr       */
+/*   Updated: 2024/03/18 09:30:09 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,3 @@ int	ft_tolower(int c)
 		return (c + 32);
 	return (c);
 }
-/*
-int	main(void)
-{
-	char	s = 'T';
-	char	d = 't';
-	char	f = '0';
-
-
-	printf("the letter is : %c\n", ft_tolower(s));
-	printf("the letter is : %c\n", ft_tolower(d));
-	printf("the letter is : %c\n", ft_tolower(f));
-
-	return (0);
-}
-*/

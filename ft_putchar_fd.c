@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tndreka <tndreka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 12:34:23 by tndreka           #+#    #+#             */
-/*   Updated: 2024/03/18 11:49:29 by tndreka          ###   ########.fr       */
+/*   Created: 2024/03/18 09:34:43 by tndreka           #+#    #+#             */
+/*   Updated: 2024/03/18 10:05:21 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
-
+void	ft_putchar_fd(char c, int fd)
 {
-	unsigned char	*temp;
-
-	temp = (unsigned char *)s;
-	while (n > 0)
-	{
-		*(temp) = 0;
-		n--;
-		temp++;
-	}
+	write(fd, &c, 1);
 }
-
-/*
-ft_bzero -- writes 0 to a byte of string
-this function is the same as the privious memset function but the difference
-is that in the argument c here we have if by default 0.
-*/

@@ -6,7 +6,7 @@
 /*   By: tndreka <tndreka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:36:36 by tndreka           #+#    #+#             */
-/*   Updated: 2024/03/15 17:33:39 by tndreka          ###   ########.fr       */
+/*   Updated: 2024/03/23 19:58:15 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,18 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		s++;
 	}
-	if (*s == (unsigned char)c)
+	if ((unsigned char)c == '\0')
+	{
 		return ((char *)s);
+	}
 	return (NULL);
 }
-//int main()
-//{
-//	char *str = "this is My string!!";
-//	char *first_M = ft_strchr(str, 'M');
-//	printf("first_M : %s\n", first_M);
-//	char *first_T = ft_strchr(str, 'T');
-//	printf("first_T : %s\n", first_T);
-//	return(0);
-//}
+/*this function is used in C to find the first pozicion to acharacter
+ * that we set in a string. this function accept 2 argument :
+ * 1 -> *s = is the string that we are going to search inside for the
+ * character first position tha we wont to find.
+ * 2 -> c = its the character that we are searching.
+ * this function it will return a pointer that shows the first character
+ * that we have find inside of the s or its going to return NULL if we didn't
+ * find the character/
+ * */

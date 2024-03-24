@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tndreka <tndreka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 12:34:23 by tndreka           #+#    #+#             */
-/*   Updated: 2024/03/18 11:49:29 by tndreka          ###   ########.fr       */
+/*   Created: 2024/03/18 09:39:21 by tndreka           #+#    #+#             */
+/*   Updated: 2024/03/19 18:33:31 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.h" 
 
-void	ft_bzero(void *s, size_t n)
-
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	unsigned char	*temp;
+	char			*rs;
+	unsigned int	i;
 
-	temp = (unsigned char *)s;
-	while (n > 0)
-	{
-		*(temp) = 0;
-		n--;
-		temp++;
-	}
+	rs = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!rs)
+		return (NULL);
+	i = -1;
+	while (++i < ft_strlen(s))
+		rs[i] = (*f)(i, s[i]);
+	rs[i] = 0;
+	return (rs);
 }
-
-/*
-ft_bzero -- writes 0 to a byte of string
-this function is the same as the privious memset function but the difference
-is that in the argument c here we have if by default 0.
-*/

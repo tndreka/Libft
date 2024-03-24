@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tndreka <tndreka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 12:34:23 by tndreka           #+#    #+#             */
-/*   Updated: 2024/03/18 11:49:29 by tndreka          ###   ########.fr       */
+/*   Created: 2024/03/18 09:40:27 by tndreka           #+#    #+#             */
+/*   Updated: 2024/03/20 15:00:57 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
-
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	unsigned char	*temp;
+	char	*sub_s;
+	size_t	i;
 
-	temp = (unsigned char *)s;
-	while (n > 0)
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	if (start > ft_strlen(s))
+		len = 0;
+	sub_s = (char *)malloc(len + 1);
+	if (!sub_s)
+		return (NULL);
+	i = 0;
+	while (len > i)
 	{
-		*(temp) = 0;
-		n--;
-		temp++;
+		sub_s[i] = s[i + start];
+		i++;
 	}
+	sub_s[i] = '\0';
+	return ((char *)sub_s);
 }
-
-/*
-ft_bzero -- writes 0 to a byte of string
-this function is the same as the privious memset function but the difference
-is that in the argument c here we have if by default 0.
-*/

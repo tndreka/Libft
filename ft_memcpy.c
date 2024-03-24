@@ -6,7 +6,7 @@
 /*   By: tndreka <tndreka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:34:42 by tndreka           #+#    #+#             */
-/*   Updated: 2024/03/13 18:30:48 by tndreka          ###   ########.fr       */
+/*   Updated: 2024/03/22 17:20:20 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,21 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return ((void *)dst);
 }
 
-/*
-int	main(void)
-{
-	char	dest[100];
-	char	src[] = "This is the function memcpy";
-	printf("this is the source : %s\n", src);
-	printf("this is te test of dest with memcpy : %s\n", ft_memcpy(dest, src, 27));
-	return (0);
-}
-*/
+/*this function copy memory area// in this function it is usful 
+to copy a number of bytes from one place of memory area (src) to another place
+ * in memory area (dst)
+ * this function takes 3 arguments :  1-> dst : its a void pointer in which we 
+ * are going to store the new string whith the moved bbytes
+ * 2 -> src : its a pointer which it shows in the memory direction which is 
+ * the string that you will be moving the bytes
+ * 3 -> len : its the argument that shows you how meny bytes you are 
+ * going to move in memory.
+ * in the begining we will initialize 2 temporary ointer for src and dst
+ *  we will make the temporary pointers that we create equal to dst and src 
+ * converted as an UNSIGNED CHAR;
+ *  do a check if src and dst are null and return dst;;
+ *  loop through the pointers until we didnt reach the 
+ * value of n(number o bytes we need to copy)
+ *  in this part we will copy bytrs from src to dst
+ *  in the end we return the dst;
+ * */

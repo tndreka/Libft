@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tndreka <tndreka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 12:34:23 by tndreka           #+#    #+#             */
-/*   Updated: 2024/03/18 11:49:29 by tndreka          ###   ########.fr       */
+/*   Created: 2024/03/18 09:34:49 by tndreka           #+#    #+#             */
+/*   Updated: 2024/03/19 18:41:47 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
-
+void	ft_putendl_fd(char *s, int fd)
 {
-	unsigned char	*temp;
+	int	i;
 
-	temp = (unsigned char *)s;
-	while (n > 0)
+	i = 0;
+	while (s[i])
 	{
-		*(temp) = 0;
-		n--;
-		temp++;
+		write (fd, &s[i], 1);
+		i++;
 	}
+	write (fd, "\n", 1);
 }
-
-/*
-ft_bzero -- writes 0 to a byte of string
-this function is the same as the privious memset function but the difference
-is that in the argument c here we have if by default 0.
-*/

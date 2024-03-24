@@ -1,33 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tndreka <tndreka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 12:34:23 by tndreka           #+#    #+#             */
-/*   Updated: 2024/03/18 11:49:29 by tndreka          ###   ########.fr       */
+/*   Created: 2024/03/18 09:39:25 by tndreka           #+#    #+#             */
+/*   Updated: 2024/03/19 18:18:48 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
-
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned char	*temp;
+	char	*res;
+	size_t	i;
+	size_t	j;
 
-	temp = (unsigned char *)s;
-	while (n > 0)
+	res = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!res)
+		return (NULL);
+	i = 0;
+	while (s1[i])
 	{
-		*(temp) = 0;
-		n--;
-		temp++;
+		res[i] = s1[i];
+		i++;
 	}
+	j = 0;
+	while (s2[j])
+	{
+		res[i + j] = s2[j];
+		j++;
+	}
+	res[i + j] = '\0';
+	return (res);
 }
-
-/*
-ft_bzero -- writes 0 to a byte of string
-this function is the same as the privious memset function but the difference
-is that in the argument c here we have if by default 0.
-*/

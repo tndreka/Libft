@@ -6,7 +6,7 @@
 /*   By: tndreka <tndreka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:32:31 by tndreka           #+#    #+#             */
-/*   Updated: 2024/03/13 12:37:08 by tndreka          ###   ########.fr       */
+/*   Updated: 2024/03/18 11:37:35 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,12 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
+
 /* 
-int	ft_isalnum(int d)
-{
-	if ((d >= 'A' && d <= 'Z') || (d >= 'a' && d <= 'z') || (d >= '0' && d <= '9'))
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
-}
+--> ft_isalnum -- alphabetical & numerical character  test
+--> this function test for any charcter for in this case 
+may be alphabetical Uper_case & Lower_case or a number charcter.
+-->return value is non-zero value if the test is tru and finds
+charter which it is alphabetical or numbers
+returns zero if the test is false 
 */

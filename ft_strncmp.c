@@ -6,7 +6,7 @@
 /*   By: tndreka <tndreka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:37:27 by tndreka           #+#    #+#             */
-/*   Updated: 2024/03/15 17:17:30 by tndreka          ###   ########.fr       */
+/*   Updated: 2024/03/23 19:55:34 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,19 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 	return (0);
 }
-/* 
- line 20 : check if n is 0 
- line 22 : check if the two strings are empty
- line 24 : check if s1 is empty and return -1 // bc s1 - s2 is negative // 
- line 26 : check if s2 is empty and return 1 // bc s1 (which contains value) -s2   
+/*this function is used to compere a set number of character inside 2 strings
+the compare its based on a number that we set and it doesn't define the end of
+the string.
+this function takes three arguments :
+1-> s1 and s2 =  are the strings that we compare
+2-> n = its the number of the characters that we set to compare the value.
+we return 0 if the strings have the same value
+a negativ number when s1 character is less than s2 character.
+a positive number when s1 character is bigger than s2 character.
+first we set the edge cases for s1 and s2 
+after we loop through our string until the number of the characters
+that we have to compere. 
+with the if condition we check if the character of s1 isn;t the same 
+whith the character of s2. if the case its tru we will return the value converted
+for each character according to alphabetic order.
 */
