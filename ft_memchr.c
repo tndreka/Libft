@@ -6,7 +6,7 @@
 /*   By: tndreka <tndreka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:37:48 by tndreka           #+#    #+#             */
-/*   Updated: 2024/03/15 16:06:01 by tndreka          ###   ########.fr       */
+/*   Updated: 2024/03/24 16:29:54 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 /*
+this function its the same as the strchr() but the only diff
+is that in memchr() works with byte string (void *);
 int main() 
 {
     const char *str = "Hello, World!";

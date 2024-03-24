@@ -6,7 +6,7 @@
 /*   By: tndreka <tndreka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 09:39:06 by tndreka           #+#    #+#             */
-/*   Updated: 2024/03/22 17:41:07 by tndreka          ###   ########.fr       */
+/*   Updated: 2024/03/24 16:58:53 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	w_counter(char const *s, char c)
 	return (j);
 }
 
-char	**free_s(char **str, int index)
+static char	**free_s(char **str, int index)
 {
 	while (index >= 0)
 	{
@@ -74,3 +74,7 @@ char	**ft_split(char const *s, char c)
 	}
 	return (str);
 }
+/*this function splits a string in to a arrray of substrings 
+based on limit of character and will take a pointer to the to input the s
+
+*/

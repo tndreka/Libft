@@ -6,7 +6,7 @@
 /*   By: tndreka <tndreka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:38:24 by tndreka           #+#    #+#             */
-/*   Updated: 2024/03/15 16:11:52 by tndreka          ###   ########.fr       */
+/*   Updated: 2024/03/24 16:32:31 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+/*
+this function compares byte of string.
+in this function we take void parameter plus the parameter that set the value of
+how many characters we are comparing (size_t n);
+if there is not a diffrence in the string we will return 0 
+*/

@@ -6,7 +6,7 @@
 /*   By: tndreka <tndreka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 09:34:24 by tndreka           #+#    #+#             */
-/*   Updated: 2024/03/22 17:13:02 by tndreka          ###   ########.fr       */
+/*   Updated: 2024/03/24 16:27:15 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,3 +55,12 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+/*
+this function does the opposet if atoi // covet from int to ascii
+in this function we have declared a function  that is used to get 
+the len of the num. then we see for edge cases before alocatin memory,
+then we set the sign of the number and after that this is 
+the part when the conversion happens.
+we devide the number by using modulo 10 and every sifer its going to be 
+convertet on ascci value + 48 
+*/
